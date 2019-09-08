@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "gabSimple"
+  spec.name          = "jekyll-theme-gabsimple"
   spec.version       = "0.1.0"
-  spec.authors       = [""]
-  spec.email         = [""]
+  spec.authors       = ["gabrewer"]
+  spec.email         = ["support@gabrewer.com"]
 
   spec.summary       = "gabSimple Simple Jekyll Blog Theme."
   spec.homepage      = "https://github.com/gabrewer/gabSimpleTheme"
@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
     f.match(%r!^(assets|_(includes|layouts|sass)/|(LICENSE|README)((\.(txt|md|markdown)|$)))!i)
   end
 
-  spec.add_runtime_dependency "jekyll", "~> 4.0"
+  spec.add_runtime_dependency "jekyll", "~> 3.8"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.9"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.1"
 

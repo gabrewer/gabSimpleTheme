@@ -62,3 +62,10 @@ main {
 footer {
   grid-area: footer;
 }
+
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: 485px 485px;
+  grid-template-areas:
+        "footer-left footer-right";
+}

@@ -2,6 +2,8 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {%- include head.html -%}
   <body>
+    {%- include navigation.html -%}
+
     {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
@@ -9,5 +11,6 @@
     </main>
 
     {%- include footer.html -%}
+    {% include after_footer.html %}
   </body>
 </html>

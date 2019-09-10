@@ -1,3 +1,39 @@
 <div class="sidebar">
-    <p>Sidebar</p>
+    <div class="sidebar-module sidebar-module-inset">
+        <h4>About</h4>
+        <div class="contact">
+            <p>
+                Gregory A Brewer<br />
+                Proud Step Father, Software Engineer, Poker Player, Wolverine<br />
+                <a href="mailto:greg@gabrewer.com">greg@gabrewer.com</a>
+            </p>
+            <p>
+                <a href="https://github.com/gabrewer">github.com/gabrewer</a><br />
+                <a href="https://twitter.com/gbrewer">twitter.com/gbrewer</a><br />
+            </p>
+        </div>
+    </div>
+
+    <div class="categories">
+        {% for category in site.categories %}
+        {% if category contains 'links' %}
+        {% else %}
+            <span style="font-size: {{ category | last | size | times: 100 | divided_by: site.categories.size | plus: 130 }}%">
+                <a href="/archives/{{ category | first | slugize }}/">
+                    {{ category | first }}
+                </a>
+            </span>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="sidebar-module">
+        <h4>@gabrewer</h4>
+        <div class="textwidget">
+            <a class="twitter-timeline" href="https://twitter.com/gbrewer"
+                onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);"
+                data-widget-id="346109784182894593">Tweets by @gbrewer</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+    </div>
 </div>

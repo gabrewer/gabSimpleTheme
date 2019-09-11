@@ -1,35 +1,38 @@
 <div class="sidebar">
-    <div class="sidebar-module sidebar-module-inset">
-        <h4>About</h4>
-        <div class="contact">
-            <p>
-                Gregory A Brewer<br />
-                Proud Step Father, Software Engineer, Poker Player, Wolverine<br />
-                <a href="mailto:greg@gabrewer.com">greg@gabrewer.com</a>
-            </p>
-            <p>
-                <a href="https://github.com/gabrewer">github.com/gabrewer</a><br />
-                <a href="https://twitter.com/gbrewer">twitter.com/gbrewer</a><br />
-            </p>
-        </div>
+  <div class="sidebar-module sidebar-module-inset">
+    <h4>About</h4>
+    <div class="contact">
+      <p>
+        Gregory A Brewer<br />
+        Proud Step Father, Software Engineer, Poker Player, Wolverine<br />
+        <a href="mailto:greg@gabrewer.com">greg@gabrewer.com</a>
+      </p>
+      <p>
+        <a href="https://github.com/gabrewer">github.com/gabrewer</a><br />
+        <a href="https://twitter.com/gbrewer">twitter.com/gbrewer</a><br />
+      </p>
     </div>
+  </div>
 
-    <div class="categories">
-        {% for category in site.categories %}
-        {% if category contains 'links' %}
-        {% else %}
-            <span style="font-size: {{ category | last | size | times: 100 | divided_by: site.categories.size | plus: 130 }}%">
-                <a href="/archives/{{ category | first | slugize }}/">
-                    {{ category | first }}
-                </a>
-            </span>
-        {% endif %}
-        {% endfor %}
-    </div>
+  <div class="categories">
+    {% for category in site.categories %} 
+    {% if category contains 'links' %} 
+    {% else %}
+    <span style="font-size: {{category | last | size | times: 100 | divided_by: site.categories.size | plus: 130}}%">
+      <a href="/archives/category/{{ category | first | slugize }}/">
+        {{ category | first }}
+      </a>
+    </span>
+    {% endif %} 
+    {% endfor %}
+  </div>
 
-    <div class="sidebar-module">
-        <div class="textwidget">
-                <a class="twitter-timeline" data-height="600" href="https://twitter.com/gbrewer?ref_src=twsrc%5Etfw">Tweets by gbrewer</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
+  <div class="sidebar-module">
+    <div class="textwidget">
+      <a class="twitter-timeline" data-height="600" href="https://twitter.com/gbrewer?ref_src=twsrc%5Etfw">
+        Tweets by gbrewer
+      </a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
+  </div>
 </div>

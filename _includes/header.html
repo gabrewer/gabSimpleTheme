@@ -1,6 +1,8 @@
 <header>
     <div class="header-title">
-        <h1 class="blog-title">{{ site.title }}</h1>
+        <h1 class="blog-title">
+            <a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        </h1>
         {% if site.subtitle %}
         <p class="lead blog-description">{{ site.subtitle }}</p>
         {% endif %}

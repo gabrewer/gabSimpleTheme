@@ -37,6 +37,21 @@ disqus_show_comment_count: true
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+    - year
+    - tag
+  layouts:
+    year: archive-year
+    category: archive-category
+    tag: archive-tag
+  permalinks:
+    year: '/archives/year/:year/'
+    category: '/archives/category/:name/'
+    tag: '/archives/tag/:name/'
 
 social_links:
     twitter: jekyllrb
@@ -55,6 +70,7 @@ social_links:
     # googleplus: +jekyll
     # microdotblog: jekyll
     # keybase: jekyll
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

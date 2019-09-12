@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div id="blog-archives">
-{% for post in site.posts reverse %}
+{% for post in site.posts reversed %}
 
   {% if post.categories contains 'links' %}
   {% else %}
